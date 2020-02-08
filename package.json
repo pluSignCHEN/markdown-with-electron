@@ -1,17 +1,28 @@
 {
   "name": "cloud-doc",
   "version": "0.1.0",
+  "main": "main.js",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "bootstrap": "^4.4.1",
+    "electron-store": "^5.1.0",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-simplemde-editor": "^4.1.0",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"wait-on http://localhost:3000/ && electron .\" \"cross-env BROWSER=none npm start\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +38,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "cross-env": "^6.0.3",
+    "devtron": "^1.4.0",
+    "electron": "^7.1.2",
+    "electron-is-dev": "^1.1.0",
+    "prop-types": "^15.7.2",
+    "wait-on": "^3.3.0"
   }
 }
